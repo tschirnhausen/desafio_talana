@@ -56,7 +56,7 @@ Tony usa un Taladoken
 
 {"player1":{"movimientos":["DSD", "S"] ,"golpes":[ "P", ""]},"player2":{"movimientos":["", "ASA", "DA", "AAA", "", "SA"],"golpes":["P", "", "P", "K", "K", "K"]}}
 Tony usa un Taladoken
-Arnaldor se mueve y da un puñetazo
+Arnaldor da un puñetazo
 Tony se agacha
 Arnaldor se mueve
 Tony no hace nada!
@@ -64,7 +64,7 @@ Arnaldor se mueve y da un puñetazo
 Tony no hace nada!
 Arnaldor se mueve y da una patada
 Tony no hace nada!
-Arnaldor se mueve y da una patada
+Arnaldor da una patada
 Tony no hace nada!
 Arnaldor usa un Remuyuken
 ¡La batalla termina! El ganador es Arnaldor y aún le quedan 3 puntos de vida
