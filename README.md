@@ -7,6 +7,7 @@ Las instrucciones del problema resuelto en este repositorio son las que se encue
 ## Requerimientos
 1. Sistema operativo Unix
 2. pipenv 11.9.0
+3. python3+
 
 ## Instalación
 ### Clonar el repositorio
