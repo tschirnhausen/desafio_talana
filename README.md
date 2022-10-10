@@ -74,12 +74,21 @@ Arnaldor usa un Remuyuken
 ### Supongamos que en un repositorio GIT hiciste un commit y olvidaste un archivo. Explica cómo se soluciona si hiciste push, y cómo si aún no hiciste. 
 Si no se hizo push. Se puede hacer un restore del commit
 ```
-git restore --staged
+git reset HEAD~
 ```
 
-Si ya se hizo push, en cambio, se puede revertir el commit con su identificador único
+También es posible sincronizarse con la rama remota y descartar los cambios locales, en especial si hay discrepancias en el `HEAD`.
 ```
-git revert [commit hash]
+git fetch origin && git reset --hard origin/master && git clean -f -d
+```
+
+Si ya se hizo push, en cambio, se debe buscar el hash del último commit válido y dejar los cambios en estado `unstaged`.
+```
+git log origin/<branch>
+git push -f origin <hash_commit>:<branch>
+git add <filename>
+git commit -m "<scope>: <commit>"
+git push origin <branch>
 ```
 
 En ambos casos, se puede luego hacer el `add` correspondiente y hacer el push del commit corregido.

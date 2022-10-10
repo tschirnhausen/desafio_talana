@@ -42,13 +42,13 @@ class Battle:
                     power=2
                 ),
                 Attack(
-                    name='Puño o Patada',
+                    name='Puño',
                     combination='P',
                     activation_attack=None,
                     power=1
                 ),
                 Attack(
-                    name='Puño o Patada',
+                    name='Patada',
                     combination='K',
                     activation_attack=None,
                     power=1
@@ -73,13 +73,13 @@ class Battle:
                     power=2
                 ),
                 Attack(
-                    name='Puño o Patada',
+                    name='Puño',
                     combination='P',
                     activation_attack=None,
                     power=1
                 ),
                 Attack(
-                    name='Puño o Patada',
+                    name='Patada',
                     combination='K',
                     activation_attack=None,
                     power=1

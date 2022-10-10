@@ -119,6 +119,6 @@ class Player:
             }
 
         return {
-            'message': f'se mueve y {message_2}',
+            'message': f'se mueve y {message_2}' if combination != '' else message_2,
             'damage': 1
         }
