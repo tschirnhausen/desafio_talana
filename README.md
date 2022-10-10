@@ -49,3 +49,29 @@ Arnaldor SA K
 Arnaldor usa un Remuyuken
 La batalla se termina. Tony ha perdido sus puntos de vida
 ```
+
+## Preguntas
+### Supongamos que en un repositorio GIT hiciste un commit y olvidaste un archivo. Explica cómo se soluciona si hiciste push, y cómo si aún no hiciste. 
+Si no se hizo push. Se puede hacer un restore del commit
+```
+git restore --staged
+```
+
+Si ya se hizo push, en cambio, se puede revertir el commit con su identificador único
+```
+git revert [commit hash]
+```
+
+En ambos casos, se puede luego hacer el `add` correspondiente y hacer el push del commit corregido.
+
+### Si has trabajado con control de versiones ¿Cuáles han sido los flujos con los que has trabajado?
+Gitflow
+
+### ¿Cuál ha sido la situación más compleja que has tenido con esto?
+Trabajando en equipo, nos dimos cuenta de que a veces se "perdía" código. Pensamos que se trataba de algún error de configuración de git en algún dispositivo del equipo. Al analizar los commits y hacerle un seguimiento a un archivo crítico, se encontró que un miembro del equipo, dada su poca experiencia con git, copiaba archivos manualmente de versiones anteriores y los utilizaba para solucionar conflictos. 
+
+### ¿Qué experiencia has tenido con los microservicios? 
+He consumido y participado en diseño y programación de microservicios. Consumiendo diversas API externas e internas, para utilizar servicios de terceros o comunicar distintos sistemas de la plataforma, y en cuanto a implementación, para el procesamiento de pagos y liberaciones de saldo.
+
+### ¿Cuál es tu servicio favorito de GCP o AWS? ¿Por qué? 
+AWS Elastic Beanstalk. Ya que simplifica el proceso de puesta en marcha de los proyectos y también su mantenimiento, al orquestar todo mediante este servicio.
