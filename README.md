@@ -35,19 +35,39 @@ pipenv run python main.py
 
 ## Salida de ejemplo
 ```
-Tony D K
+{"player1":{"movimientos":["D","DSD","S","DSD","SD"],"golpes":["K","P","","K","P"]},"player2":{"movimientos":["SA","SA","SA","ASA","SA"],"golpes":["K","","K","P","P"]}}
 Tony avanza y da una patada
-Arnaldor SA K
 Arnaldor usa un Remuyuken
-Tony DSD P
 Tony usa un Taladoken
-Arnaldor SA 
 Arnaldor se mueve
-Tony S 
 Tony se agacha
-Arnaldor SA K
 Arnaldor usa un Remuyuken
-La batalla se termina. Tony ha perdido sus puntos de vida
+¡La batalla termina! El ganador es Arnaldor y aún le quedan 2 puntos de vida
+
+{"player1":{"movimientos":["SDD", "DSD", "SA", "DSD"] ,"golpes":["K", "P", "K", "P"]},"player2":{"movimientos":["DSD", "WSAW", "ASA", "", "ASA", "SA"],"golpes":["P", "K", "K", "K", "P","k"]}}
+Tony se mueve y da una patada
+Arnaldor se mueve y da un puñetazo
+Tony usa un Taladoken
+Arnaldor se mueve y da una patada
+Tony se mueve y da una patada
+Arnaldor se mueve y da una patada
+Tony usa un Taladoken
+¡La batalla termina! El ganador es Tony y aún le quedan 3 puntos de vida
+
+{"player1":{"movimientos":["DSD", "S"] ,"golpes":[ "P", ""]},"player2":{"movimientos":["", "ASA", "DA", "AAA", "", "SA"],"golpes":["P", "", "P", "K", "K", "K"]}}
+Tony usa un Taladoken
+Arnaldor se mueve y da un puñetazo
+Tony se agacha
+Arnaldor se mueve
+Tony no hace nada!
+Arnaldor se mueve y da un puñetazo
+Tony no hace nada!
+Arnaldor se mueve y da una patada
+Tony no hace nada!
+Arnaldor se mueve y da una patada
+Tony no hace nada!
+Arnaldor usa un Remuyuken
+¡La batalla termina! El ganador es Arnaldor y aún le quedan 3 puntos de vida
 ```
 
 ## Preguntas

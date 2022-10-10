@@ -85,6 +85,13 @@ class Player:
 
 
     def get_actions(self, combination:str, activation:str, is_left:bool = True) -> dict:
+
+        if combination is None and activation is None:
+            return {
+                'message': 'no hace nada!',
+                'damage': 0
+            }
+
         if self._is_attack(combination, activation):
             attack: Attack = self.get_attack(combination, activation)
             return {

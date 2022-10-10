@@ -1,5 +1,5 @@
 from kombat.player import Player, Attack
-from typing import List, NamedTuple
+from typing import List, NamedTuple, Optional
 import json
 
 class InvalidBattleSequence(Exception):
@@ -149,13 +149,31 @@ class Battle:
         else:
             return (self.DEFAULT_PLAYER, None)
 
+    
+    def _get_winner_message(self, loser: Player) -> str:
+        winner: Player = None
+
+        if loser == self.player_1:
+            winner = self.player_2
+        elif loser == self.player_2:
+            winner = self.player_1
+
+        return f'¡La batalla termina! El ganador es {winner.name} y aún le quedan {winner.energy_points} puntos de vida'
+
 
     def _update_battle_at_next(self, player: Player, damage: int):
         current_energy: int = player.damage(damage=damage)
         if current_energy < 1:
-            print(f'La batalla se termina. {player.name} ha perdido sus puntos de vida')
+            print(self._get_winner_message(player))
             return True
-        return False        
+        return False
+
+
+    def _get_key_action(self, player: str, action_type: str, current_round: int) -> Optional[str]:
+        if current_round > (len(self.battle_sequence.get(player).get(action_type)) - 1):
+            ''' Case when player didn't press any key '''
+            return None
+        return self.battle_sequence.get(player).get(action_type)[current_round]
 
 
     def start_battle(self) -> str:
@@ -169,13 +187,11 @@ class Battle:
         current_round: int = 0
 
         while not IS_BATTLE_FINISHED:
-            first_player_mov = self.battle_sequence.get('player1').get('movimientos')[current_round]
-            first_player_stroke = self.battle_sequence.get('player1').get('golpes')[current_round]
+            first_player_mov: str = self._get_key_action(player=first_player, action_type='movimientos', current_round=current_round)
+            first_player_stroke: str = self._get_key_action(player=first_player, action_type='golpes', current_round=current_round)
 
-            second_player_mov = self.battle_sequence.get('player2').get('movimientos')[current_round]
-            second_player_stroke = self.battle_sequence.get('player2').get('golpes')[current_round]
-
-            print(first_player_obj.name, first_player_mov, first_player_stroke)
+            second_player_mov: str = self._get_key_action(player=second_player, action_type='movimientos', current_round=current_round)
+            second_player_stroke: str = self._get_key_action(player=second_player, action_type='golpes', current_round=current_round)
 
             first_player_actions = first_player_obj.get_actions(
                     combination=first_player_mov,
@@ -189,8 +205,6 @@ class Battle:
             if self._update_battle_at_next(second_player_obj, first_player_actions.get('damage')):
                 IS_BATTLE_FINISHED = True
                 break
-
-            print(second_player_obj.name,second_player_mov, second_player_stroke)
 
             second_player_actions = second_player_obj.get_actions(
                 combination=second_player_mov,
