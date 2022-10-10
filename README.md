@@ -4,6 +4,10 @@
 Solución desarrollara en Python3 por el postulante Javier Valenzuela para el desafío "Talana Kombat".
 Las instrucciones del problema resuelto en este repositorio son las que se encuentran en `resources/desafio_talana.pdf`
 
+## Requerimientos
+1. Sistema operativo Unix
+2. pipenv 11.9.0
+
 ## Instalación
 ### Clonar el repositorio
 ```
