@@ -1,11 +1,10 @@
 # Desafío Talana Kombat
 
 ## Introducción
-Solución desarrollara en Python3 por el postulante Javier Valenzuela para el desafío "Talana Kombat".
+Solución desarrollada en Python3 por el postulante Javier Valenzuela para el desafío "Talana Kombat".
 Las instrucciones del problema resuelto en este repositorio son las que se encuentran en `resources/desafio_talana.pdf`
 
 ## Requerimientos
-1. Sistema operativo Unix
 2. pipenv 11.9.0
 3. python3+
 
@@ -77,21 +76,19 @@ Si no se hizo push. Se puede hacer un restore del commit
 git reset HEAD~
 ```
 
-También es posible sincronizarse con la rama remota y descartar los cambios locales, en especial si hay discrepancias en el `HEAD`.
-```
-git fetch origin && git reset --hard origin/master && git clean -f -d
-```
-
 Si ya se hizo push, en cambio, se debe buscar el hash del último commit válido y dejar los cambios en estado `unstaged`.
 ```
 git log origin/<branch>
 git push -f origin <hash_commit>:<branch>
+```
+
+En ambos casos, se puede luego hacer el `add` correspondiente y hacer el push del commit corregido.
+
+```
 git add <filename>
 git commit -m "<scope>: <commit>"
 git push origin <branch>
 ```
-
-En ambos casos, se puede luego hacer el `add` correspondiente y hacer el push del commit corregido.
 
 ### Si has trabajado con control de versiones ¿Cuáles han sido los flujos con los que has trabajado?
 Gitflow
