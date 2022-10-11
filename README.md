@@ -19,11 +19,11 @@ git clone ssh://github.com/tschirnhausen/desafio_talana
 cd desafio_talana
 ```
 
-### Activar entorno virtual e instalar dependencias
+### Crear entorno virtual, activar e instalar dependencias
 ```
 pipenv shell
+pipev activate
 pipenv install
-pipev activate // Para activar el entorno
 ```
 
 ## Uso general
@@ -31,6 +31,7 @@ pipev activate // Para activar el entorno
 ```
 pipenv run python main.py
 ```
+Para simular otra batalla, se puede reemplazar el valor de la variable `battle_sequence` en el archivo `main.py`
 
 ## Salida de ejemplo
 ```
