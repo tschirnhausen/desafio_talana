@@ -1,5 +1,5 @@
 from kombat.player import Player, Attack
-from typing import List, NamedTuple, Optional
+from typing import Optional
 import json
 
 class InvalidBattleSequence(Exception):

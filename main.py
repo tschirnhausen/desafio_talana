@@ -1,5 +1,4 @@
 from kombat.battle import Battle
-from kombat.player import Player, Attack
 
 def main():
     battle_sequence: str = '{"player1":{"movimientos":["D","DSD","S","DSD","SD"],"golpes":["K","P","","K","P"]},"player2":{"movimientos":["SA","SA","SA","ASA","SA"],"golpes":["K","","K","P","P"]}}'
