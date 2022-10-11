@@ -5,8 +5,8 @@ Solución desarrollada en Python3 por el postulante Javier Valenzuela para el de
 Las instrucciones del problema resuelto en este repositorio son las que se encuentran en `resources/desafio_talana.pdf`
 
 ## Requisitos
-2. pipenv 11.9.0
-3. python3+
+1. python3+
+2. pipenv 11.9.0 (Opcional)
 
 ## Instalación
 ### Clonar el repositorio
@@ -20,6 +20,7 @@ cd desafio_talana
 ```
 
 ### Crear entorno virtual, activar e instalar dependencias
+El proyecto puede ejecutarse directamente con `python3`, sin embargo, puede ejecutarse en un entorno virtual con pipenv:
 ```
 pipenv shell
 pipev activate
